@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss() // Add the Vite plugin
   ],
-  base: "/Portfolio",
+  base: process.env.VITE_BASE_PATH || "/Portfolio/", // Use environment variable or default to "/Portfolio/"
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
